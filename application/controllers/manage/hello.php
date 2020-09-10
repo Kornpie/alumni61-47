@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Welcome extends CI_Controller {
+class Hello extends CI_Controller {
 
 	function __construct()
 	{
@@ -26,10 +26,7 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-		// $data['name']= "korn";
-		// $data['email']= "korn@gmail.com";
-		$data['student']=array("614259026","korn","55","SE");
-		$this->load->view('hello_view',$data);
+		$this->load->view('welcome_message');
 		
 	}
 	public function show($name=null,$lastname=null)
@@ -40,5 +37,6 @@ class Welcome extends CI_Controller {
 	public function _display()
 	{	
 	echo "</br>"."SE";
+	$this->load->view("hello_view");
 	}
 }
